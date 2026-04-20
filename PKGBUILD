@@ -13,4 +13,6 @@ source=("${pkgname}-${pkgver}.tar.gz::${url}/releases/download/v${pkgver}/Fount-
 sha256sums=('0287a95e42e9525d4b34a8d589a15807d32819b5c6cdb43804160552793fca6a')
 package() {
   install -Dm755 "${srcdir}/fount" "${pkgdir}/usr/bin/fount"
+  install -Dm644 "${srcdir}/assets/linux/fount.desktop" "${pkgdir}/usr/share/applications/fount.desktop"
+  install -Dm644 "${srcdir}/assets/icons/Dark-Fount.png" "${pkgdir}/usr/share/icons/hicolor/256x256/apps/fount.png"
 }
